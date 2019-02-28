@@ -10,7 +10,7 @@ WORKDIR /var/app/server
 RUN npm install --no-cache && npm i -g nodemon
 
 
-EXPOSE 3000 4000 
+EXPOSE 4000 
 
 CMD [ "nodemon", "index.js" ]
 

@@ -6,10 +6,10 @@ app.get('/api/data', (req, res) => {
     res.send({data: "Success"})
 })
 
-app.use(express.static(path.join(__dirname,  'build')));
+app.use(express.static(path.join(__dirname,  '..', 'client', 'build')));
 
 app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, '..', 'app', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 });
 
-app.listen(4000);
+app.listen(4000, '0.0.0.0');
